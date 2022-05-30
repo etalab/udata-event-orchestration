@@ -1,6 +1,0 @@
-
-  datalake-consumer:
-    build:
-      dockerfile: Dockerfile.datalake.consumer
-    container_name: datalake-consumer
-
