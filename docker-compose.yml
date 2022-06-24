@@ -52,25 +52,34 @@ services:
       MINIO_SECRET_KEY: geoffrey
     command: server /data
 
-  datalake-consumer:
+  hydra-consumer:
     build:
       context: .
-      dockerfile: Dockerfile.datalake.consumer
+      dockerfile: Dockerfile.hydra.consumer
     env_file:
-      - .env.datalake
-    container_name: datalake-consumer
+      - .env.hydra
+    container_name: hydra-consumer
 
-  datalake-worker:
+  hydra-postgres:
+    image: postgres
+    container_name: hydra-postgres
+    restart: always
+    environment:
+      POSTGRES_PASSWORD: postgres
+
+  hydra-crawler:
     build:
       context: .
-      dockerfile: Dockerfile.datalake.worker
+      dockerfile: Dockerfile.hydra.crawler
     env_file:
-      - .env.datalake
-    container_name: datalake-worker
+      - .env.hydra
+    depends_on:
+      - hydra-postgres
+    container_name: hydra-crawler
 
-  datalake-redis:
+  hydra-redis:
     image: redis:latest
-    container_name: datalake-redis
+    container_name: hydra-redis
     command: ["redis-server", "--bind", "0.0.0.0", "--port", "6380"]
 
   analysis-consumer:
