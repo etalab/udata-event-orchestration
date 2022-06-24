@@ -19,7 +19,7 @@ docker-compose up --build -d
 - analysis service :
   - redis
   - consumer kafka
-  - crawler
+  - worker
 
 # Next
 
