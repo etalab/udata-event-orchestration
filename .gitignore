@@ -1,7 +1,4 @@
 .env.hydra
 .env.analysis
-csv-detective/
-udata-analysis-service/
-udata-datalake-service/
 minio-data/
 export-resource.csv

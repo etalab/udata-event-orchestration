@@ -2,8 +2,8 @@
 
 ```
 cp .env.analysis.example .env.analysis # Make changes if you want
-cp .env.hydra.example .env.datalake # Make changes if you want
-./init.sh # Beware, download of catalog is desactivated by default, you have to uncomment it for the first time
+cp .env.hydra.example .env.hydra # Make changes if you want
+./init.sh # Beware, download of catalog should be done only the first time
 docker-compose up --build -d
 ```
 

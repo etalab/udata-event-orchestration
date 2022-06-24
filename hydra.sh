@@ -1,4 +1,4 @@
 #!/bin/bash
-hydra init-db
-#hydra load-catalog
-hydra-crawl
+udata-hydra init-db
+#udata-hydra load-catalog
+udata-hydra-crawl

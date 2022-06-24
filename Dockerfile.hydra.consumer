@@ -2,9 +2,7 @@ FROM python:3.9
 
 WORKDIR /app
 
-COPY ./udata-datalake-service/ .
-RUN make deps
-RUN pip install .
+RUN pip install udata-hydra
 
-ENTRYPOINT ["hydra", "run-kafka-integration"]
+ENTRYPOINT ["udata-hydra", "run-kafka-integration"]
 

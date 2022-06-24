@@ -2,13 +2,10 @@ FROM python:3.9
 
 WORKDIR /app
 
-COPY ./udata-datalake-service/ .
+RUN pip install udata-hydra
+
 COPY ./hydra.sh .
 RUN chmod +x ./hydra.sh
-RUN make deps
-RUN pip install .
-#RUN hydra init-db
-# RUN hydra load-catalog
 
 ENTRYPOINT ["/app/hydra.sh"]
 
