@@ -4,5 +4,6 @@ analysis/.env.analysis
 analysis/udata-analysis-service
 csvapi/.env.csvapi
 csvapi/csvapi
+csvapi/dbs/*
 minio-data/
 export-resource.csv

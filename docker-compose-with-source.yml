@@ -127,6 +127,8 @@ services:
     ports:
       - 8000:8000
     container_name: csvapi-server
+    volumes:
+      - ./csvapi/dbs:/app/dbs
     entrypoint: csvapi serve -h 0.0.0.0 -p 8000
 
   csvapi-consumer:
@@ -136,5 +138,7 @@ services:
     env_file:
       - ./csvapi/.env.csvapi
     container_name: csvapi-consumer
+    volumes:
+      - ./csvapi/dbs:/app/dbs
     entrypoint: csvapi consume
 
