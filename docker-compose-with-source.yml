@@ -48,34 +48,47 @@ services:
     volumes:
       - ./minio-data:/data
     environment:
-      MINIO_ACCESS_KEY: geoffrey
-      MINIO_SECRET_KEY: geoffrey
+      MINIO_ACCESS_KEY: minio
+      MINIO_SECRET_KEY: password
     command: server /data
 
-  hydra-consumer:
-    build:
-      context: .
-      dockerfile: Dockerfile.hydra.consumer
-    env_file:
-      - .env.hydra
-    container_name: hydra-consumer
-
   hydra-postgres:
-    image: postgres
+    build:
+     context: ./hydra/
+     dockerfile: dockerfiles/Dockerfile.hydra.postgres
     container_name: hydra-postgres
     restart: always
     environment:
       POSTGRES_PASSWORD: postgres
+    healthcheck:
+      test: [ "CMD", "pg_isready", "-q", "-d", "postgres", "-U", "postgres" ]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+  hydra-consumer:
+    build:
+      context: ./hydra/
+      dockerfile: dockerfiles/Dockerfile.hydra.with.source
+    env_file:
+      - ./hydra/.env.hydra
+    depends_on:
+      hydra-postgres:
+        condition: service_healthy
+    container_name: hydra-consumer
+    entrypoint: udata-hydra run-kafka-integration
 
   hydra-crawler:
     build:
-      context: .
-      dockerfile: Dockerfile.hydra.crawler
+      context: ./hydra/
+      dockerfile: dockerfiles/Dockerfile.hydra.with.source
     env_file:
-      - .env.hydra
+      - ./hydra/.env.hydra
     depends_on:
-      - hydra-postgres
+      hydra-postgres:
+        condition: service_healthy
     container_name: hydra-crawler
+    entrypoint: udata-hydra-crawl
 
   hydra-redis:
     image: redis:latest
@@ -84,21 +97,44 @@ services:
 
   analysis-consumer:
     build:
-      context: .
-      dockerfile: Dockerfile.analysis.consumer
+      context: ./analysis/
+      dockerfile: dockerfiles/Dockerfile.analysis.with.source
     env_file:
-      - .env.analysis
+      - ./analysis/.env.analysis
     container_name: analysis-consumer
+    entrypoint: udata-analysis-service consume
 
   analysis-worker:
     build:
-      context: .
-      dockerfile: Dockerfile.analysis.worker
+      context: ./analysis/
+      dockerfile: dockerfiles/Dockerfile.analysis.with.source
     env_file:
-      - .env.analysis
+      - ./analysis/.env.analysis
     container_name: analysis-worker
+    entrypoint: udata-analysis-service work
 
   analysis-redis:
     image: redis:latest
     container_name: analysis-redis
     command: ["redis-server", "--bind", "0.0.0.0", "--port", "6380"]
+
+  csvapi-server:
+    build:
+      context: ./csvapi/
+      dockerfile: dockerfiles/Dockerfile.csvapi.with.source
+    env_file:
+      - ./csvapi/.env.csvapi
+    ports:
+      - 8000:8000
+    container_name: csvapi-server
+    entrypoint: csvapi serve -h 0.0.0.0 -p 8000
+
+  csvapi-consumer:
+    build:
+      context: ./csvapi/
+      dockerfile: dockerfiles/Dockerfile.csvapi.with.source
+    env_file:
+      - ./csvapi/.env.csvapi
+    container_name: csvapi-consumer
+    entrypoint: csvapi consume
+

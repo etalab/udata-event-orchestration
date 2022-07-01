@@ -2,9 +2,11 @@
 
 ```
 cp .env.analysis.example .env.analysis # Make changes if you want
-cp .env.hydra.example .env.datalake # Make changes if you want
-./init.sh # Beware, download of catalog is desactivated by default, you have to uncomment it for the first time
-docker-compose up --build -d
+cp .env.hydra.example .env.hydra # Make changes if you want
+cp .env.csvapi.example .env.csvapi # Make changes if you want
+./get_source.sh # To execute services with source instead of pypi. NB : csvapi with kafka integration has no pypi package yet, you have to download source anyway.
+docker-compose up -f docker-compose-with-source.yml --build -d # if you want to execute with source
+docker-compose up -f docker-compose-with-pypi.yml --build -d # if you want to execute with pypi packages
 ```
 
 # Services
@@ -20,9 +22,6 @@ docker-compose up --build -d
   - redis
   - consumer kafka
   - worker
-
-# Next
-
-- [] Add csvapi (and maybe udata-search-service ?)
-- [] Implement udata-kafka-event-testing into this repo  
-
+- csvapi service
+  - server # localhost:8000
+  - consumer

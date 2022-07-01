@@ -2,9 +2,6 @@ FROM python:3.9
 
 WORKDIR /app
 
-COPY ./udata-analysis-service/requirements.txt .
-
-RUN pip install -r requirements.txt
 RUN pip install csv-detective==0.4.3
 
 RUN pip install flit
@@ -13,5 +10,5 @@ COPY ./udata-analysis-service/ .
 
 RUN FLIT_ROOT_INSTALL=1 make install
 
-ENTRYPOINT ["udata-analysis-service", "work"]
+#ENTRYPOINT ["udata-analysis-service", "consume"]
 

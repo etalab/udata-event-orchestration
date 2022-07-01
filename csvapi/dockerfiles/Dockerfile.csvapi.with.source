@@ -1,0 +1,10 @@
+FROM python:3.9
+
+WORKDIR /app
+
+COPY ./csvapi/ .
+
+RUN pip install -e .
+RUN pip install Jinja2==3.0.3
+RUN pip install Werkzeug==1.0.0
+
