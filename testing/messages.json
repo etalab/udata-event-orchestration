@@ -1,491 +1,336 @@
 [
     {
         "topic": "resource.created",
-        "key": "ac59a0f5-fa83-4b82-bf12-3c5806d4f19f",
-        "type": "csv",
+        "key": "503c39b0-58d8-45fe-ace0-55795bb0a6b7",
+        "type": "available-csv",
         "message": {
             "service": "udata",
             "value": {
-                "resource": {
-                    "checksum": null,
-                    "created_at": "2021-01-12T15:45:14.597000",
-                    "description": "Synthèse des indicateurs avec leurs valeurs initiales, actuelles et cibles, ainsi que le pourcentage de progression et le taux d’avancement, à l’échelle nationale.",
-                    "extras": {
-                      "check:available": true,
-                      "check:count-availability": 75,
-                      "check:date": "2021-07-06T21:40:41.840000",
-                      "check:headers:charset": "utf-8",
-                      "check:headers:content-length": 4079,
-                      "check:headers:content-type": "text/plain",
-                      "check:status": 200,
-                      "check:url": "https://www.monactiviteformation.emploi.gouv.fr/mon-activite-formation/public/listePubliqueOF?format=csv"
-                    },
-                    "filesize": null,
-                    "filetype": "remote",
-                    "format": "csv",
-                    "id": "ac59a0f5-fa83-4b82-bf12-3c5806d4f19f",
-                    "last_modified": "2021-01-13T11:00:33.332000",
-                    "latest": "https://www.data.gouv.fr/fr/datasets/r/ac59a0f5-fa83-4b82-bf12-3c5806d4f19f",
-                    "metrics": {
-                      "views": 1
-                    },
-                    "mime": null,
-                    "preview_url": null,
-                    "published": "2021-01-12T15:45:14",
-                    "schema": {
-                      
-                    },
-                    "title": "organismes",
-                    "type": "main",
-                    "url": "https://www.monactiviteformation.emploi.gouv.fr/mon-activite-formation/public/listePubliqueOF?format=csv"
-                }
+                "id": "503c39b0-58d8-45fe-ace0-55795bb0a6b7",
+                "url": "https://static.data.gouv.fr/resources/nombre-de-personnes-rickrollees-sur-data-gouv-fr/20210401-182031/rickroll.csv",
+                "format": "csv",
+                "title": "rickroll.csv",
+                "schema": {},
+                "description": null,
+                "filetype": "file",
+                "type": "main",
+                "mime": "text/csv",
+                "filesize": 73,
+                "checksum_type": "sha1",
+                "checksum_value": "ea30d3ed445f208a5b08d23dae1976376f525d47",
+                "created_at": "2021-04-01T15:10:12",
+                "modified": "2022-07-25T15:16:56",
+                "published": "2021-04-01T15:10:12",
+                "extras": {}
             },
             "meta": {
-                "dataset_id": "582c8978c751df788ec0bb7e"
+                "message_type": "resource.modified",
+                "dataset_id": "6065c5cd9f89bfd828bcbf5c"
             }
         }
     },
     {
         "topic": "resource.created",
-        "key": "5c4e1452-3850-4b59-b11c-3dd51d7fb8b5",
-        "type": "csv2",
+        "key": "71cacba9-4ffd-4ea8-bc3e-694425ddf006",
+        "type": "remote-csv",
         "message": {
             "service": "udata",
             "value": {
-                "checksum": null,
-                "created_at": "2021-01-12T15:45:14.597000",
-                "description": "Synthèse des indicateurs avec leurs valeurs initiales, actuelles et cibles, ainsi que le pourcentage de progression et le taux d’avancement, à l’échelle nationale.",
+                "id": "71cacba9-4ffd-4ea8-bc3e-694425ddf006",
+                "url": "https://github.com/etalab/barometre-resultats-donnees/raw/master/barometre-resultats-synthese-national.csv",
+                "format": "csv",
+                "title": "barometre-resultats-synthese-national.csv",
+                "schema": {},
+                "description": "Synth\u00e8se des indicateurs avec leurs valeurs initiales, actuelles et cibles, ainsi que le pourcentage de progression et le taux d\u2019avancement, \u00e0 l\u2019\u00e9chelle nationale.",
+                "filetype": "remote",
+                "type": "main",
+                "mime": null,
+                "filesize": null,
+                "checksum_type": null,
+                "checksum_value": null,
+                "created_at": "2021-01-12T15:45:14",
+                "modified": "2022-07-25T15:21:28",
+                "published": "2021-01-12T15:45:14",
                 "extras": {
                     "check:available": true,
                     "check:count-availability": 75,
-                    "check:date": "2021-07-06T21:40:41.840000",
+                    "check:date": "2021-07-06T21:40:41",
                     "check:headers:charset": "utf-8",
                     "check:headers:content-length": 4079,
                     "check:headers:content-type": "text/plain",
                     "check:status": 200,
-                    "check:url": "https://www.data.gouv.fr/fr/datasets/r/5c4e1452-3850-4b59-b11c-3dd51d7fb8b5"
-                },
-                "filesize": null,
-                "filetype": "remote",
-                "format": "csv",
-                "id": "5c4e1452-3850-4b59-b11c-3dd51d7fb8b5",
-                "last_modified": "2021-01-13T11:00:33.332000",
-                "latest": "https://www.data.gouv.fr/fr/datasets/r/5c4e1452-3850-4b59-b11c-3dd51d7fb8b5",
-                "metrics": {
-                    "views": 1
-                },
-                "mime": null,
-                "preview_url": null,
-                "published": "2021-01-12T15:45:14",
-                "schema": {
-                    
-                },
-                "title": "organismes",
-                "type": "main",
-                "url": "https://www.data.gouv.fr/fr/datasets/r/5c4e1452-3850-4b59-b11c-3dd51d7fb8b5"
-            },
-            "meta": {
-                "dataset_id": "60190d00a7273a8100dd4d38"
-            }
-        }
-    },
-    {
-        "topic": "resource.created",
-        "key": "1a35594a-99f2-4257-87e0-ec2f55039276",
-        "type": "xlsx",
-        "message": {
-            "service": "udata",
-            "value": {
-                "resource": {
-                    "checksum": {
-                      "type": "sha1",
-                      "value": "fd2a5e095d6f5b1c98059cf9dad376f514e95f0e"
-                    },
-                    "created_at": "2022-04-14T15:24:38.551000",
-                    "description": null,
-                    "extras": {
-                      
-                    },
-                    "filesize": 290023,
-                    "filetype": "file",
-                    "format": "xlsx",
-                    "id": "1a35594a-99f2-4257-87e0-ec2f55039276",
-                    "last_modified": "2022-04-14T15:24:40.142000",
-                    "latest": "https://www.data.gouv.fr/fr/datasets/r/1a35594a-99f2-4257-87e0-ec2f55039276",
-                    "metrics": {
-                      "views": 688
-                    },
-                    "mime": "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
-                    "preview_url": "/tabular/preview/?url=https%3A%2F%2Fstatic.data.gouv.fr%2Fresources%2Felection-presidentielle-des-10-et-24-avril-2022-resultats-definitifs-du-1er-tour%2F20220414-152438%2Fresultats-par-niveau-cirlg-t1-france-entiere.xlsx",
-                    "published": "2022-04-14T15:24:38",
-                    "schema": {
-                      
-                    },
-                    "title": "resultats-par-niveau-cirlg-t1-france-entiere.xlsx",
-                    "type": "main",
-                    "url": "https://static.data.gouv.fr/resources/election-presidentielle-des-10-et-24-avril-2022-resultats-definitifs-du-1er-tour/20220414-152438/resultats-par-niveau-cirlg-t1-france-entiere.xlsx"
+                    "check:url": "https://github.com/etalab/barometre-resultats-donnees/raw/master/barometre-resultats-synthese-national.csv"
                 }
             },
             "meta": {
-                "dataset_id": "62581fdf02e05e365ea227a1"
-            }
-        }
-    },
-    {
-        "topic": "resource.created",
-        "key": "fe9fe926-a284-484f-8f65-57ffd46f1ba4",
-        "type": "json",
-        "message": {
-            "service": "udata",
-            "value": {
-                "resource": {
-                    "checksum": null,
-                    "created_at": "2021-01-12T17:12:59.409000",
-                    "description": "Synthèse des indicateurs avec leurs valeurs initiales, actuelles et cibles, ainsi que le pourcentage de progression et le taux d’avancement, à l’échelle nationale.",
-                    "extras": {
-                      "check:available": true,
-                      "check:count-availability": 13,
-                      "check:date": "2021-06-25T14:01:09.014000",
-                      "check:headers:charset": "utf-8",
-                      "check:headers:content-length": 4788,
-                      "check:headers:content-type": "text/plain",
-                      "check:status": 200,
-                      "check:url": "https://github.com/etalab/barometre-resultats-donnees/raw/master/json/barometre-resultats-synthese-national.json"
-                    },
-                    "filesize": null,
-                    "filetype": "remote",
-                    "format": "json",
-                    "id": "fe9fe926-a284-484f-8f65-57ffd46f1ba4",
-                    "last_modified": "2021-01-13T11:01:02.132000",
-                    "latest": "https://www.data.gouv.fr/fr/datasets/r/fe9fe926-a284-484f-8f65-57ffd46f1ba4",
-                    "metrics": {
-                      "views": 4
-                    },
-                    "mime": null,
-                    "preview_url": null,
-                    "published": "2021-01-12T17:12:59",
-                    "schema": {
-                      
-                    },
-                    "title": "barometre-resultats-synthese-national.json",
-                    "type": "main",
-                    "url": "https://github.com/etalab/barometre-resultats-donnees/raw/master/json/barometre-resultats-synthese-national.json"
-                }
-            },
-            "meta": {
+                "message_type": "resource.created",
                 "dataset_id": "5ff5e6e99724cb8fff59a5be"
             }
         }
     },
     {
         "topic": "resource.created",
-        "key": "98f7cac6-6b29-4859-8739-51b825196959",
-        "type": "zip",
+        "key": "293b988d-639d-49c6-8d8d-4e75cfe1a412",
+        "type": "unavailable-csv",
         "message": {
             "service": "udata",
             "value": {
-                "resource": {
-                    "checksum": {
-                      "type": "sha1",
-                      "value": "a4ca4d9b4f5bee00de049cb73cc0abe8cbcfc52a"
-                    },
-                    "created_at": "2016-06-13T14:20:43.722000",
-                    "description": "Archive ZIP qui regroupe :\n-\tLa liste des produits autorisés ou retirés avec leurs AMM et leurs types de classification. (Fichiers : produits_ … .csv)\n\n-\tLa liste des usages des produits (hors MFSC). Il existe une ligne par usage et produit. Un même produit se retrouve donc sur plusieurs lignes (une par usage du produit). Le tableau contient les produits autorisés et retirés. (Fichiers : produits_usages_ … .csv)\n\n-\tLa liste des usages des produits (hors MFSC) autorisés. Il existe une ligne par usage et produit. Un même produit se retrouve donc sur plusieurs lignes (une par usage du produit). Le tableau contient uniquement les produits autorisés, mais informe sur tous les usages autorisés ou retirés de ce produit. (Fichiers : usages_des_produits_autorises_ … .csv)\n\n-\tLa liste des phrases de risque des produits. (Fichiers : produits_phrases_de_risque_ … .csv)\n\n-\tLa liste des substances actives. (Fichiers : substance_active_ … .csv)\n\n-\tLa liste des conditions d’emploi des produits. Il existe une ligne par conditions d’emploi et produit. Un même produit se retrouve donc sur plusieurs lignes (une par conditions d’emploi du produit). (Fichiers produits_condition_emploi_ … .csv)\n\n-\tLa liste des classes et des mentions danger des produits (hors MFSC). Il existe une ligne par classes – mentions dangers et produit. Un même produit se retrouve donc sur plusieurs lignes. (Fichiers produits_classe_et_mention_danger_ … .csv)\n\n-\tLa liste des usages des MFSC et produits mixtes. Il existe une ligne par usage et produit. Un même produit se retrouve donc sur plusieurs lignes (une par usage du produit). (Fichiers mfsc_et_mixte_usage_ … .csv)\n\n-\tLa liste des compositions des MFSC et produits mixtes. (Fichiers mfsc_et_mixte_composition_ … .csv)",
-                    "extras": {
-                      "check:available": true,
-                      "check:count-availability": 18,
-                      "check:date": "2022-01-16T13:11:00.319000",
-                      "check:status": 204,
-                      "check:url": "https://static.data.gouv.fr/resources/donnees-ouvertes-du-catalogue-des-produits-phytopharmaceutiques-adjuvants-matieres-fertilisantes-et-support-de-culture-produits-mixtes-et-melanges-e-phy/20180926-104236/usages-des-produits-autorises-v2-windows-1252.csv"
-                    },
-                    "filesize": 6626005,
-                    "filetype": "file",
-                    "format": "zip",
-                    "id": "98f7cac6-6b29-4859-8739-51b825196959",
-                    "last_modified": "2022-04-22T15:37:17.098000",
-                    "latest": "https://www.data.gouv.fr/fr/datasets/r/98f7cac6-6b29-4859-8739-51b825196959",
-                    "metrics": {
-                      "nb_hits": 0,
-                      "nb_uniq_visitors": 0,
-                      "nb_visits": 0,
-                      "views": 113
-                    },
-                    "mime": "application/zip",
-                    "preview_url": null,
-                    "published": "2022-04-22T15:37:05",
-                    "schema": {
-                      
-                    },
-                    "title": "decisionamm-intrant-format-csv-20220422.zip",
-                    "type": "main",
-                    "url": "https://static.data.gouv.fr/resources/donnees-ouvertes-du-catalogue-e-phy-des-produits-phytopharmaceutiques-matieres-fertilisantes-et-supports-de-culture-adjuvants-produits-mixtes-et-melanges/20220422-153704/decisionamm-intrant-format-csv-20220422.zip"
-                }
+                "id": "293b988d-639d-49c6-8d8d-4e75cfe1a412",
+                "url": "https://static.data.gouv.fr/resources/wrong-dataset/20220425-100653/wrong-resource.csv",
+                "format": "csv",
+                "title": "irve.csv",
+                "schema": {},
+                "description": "",
+                "filetype": "file",
+                "type": "main",
+                "mime": null,
+                "filesize": null,
+                "checksum_type": null,
+                "checksum_value": null,
+                "created_at": "2021-01-12T15:45:14",
+                "modified": "2022-07-25T15:21:28",
+                "published": "2021-01-12T15:45:14",
+                "extras": {}
             },
             "meta": {
-                "dataset_id": "575e9fac88ee38072a640390"
+                "message_type": "resource.created",
+                "dataset_id": "62424dc937247670b0bf1180"
+            }
+        }
+    },
+    {
+        "topic": "resource.created",
+        "key": "ac59a0f5-fa83-4b82-bf12-3c5806d4f19f",
+        "type": "wrong-domain",
+        "message": {
+            "service": "udata",
+            "value": {
+                "id": "ac59a0f5-fa83-4b82-bf12-3c5806d4f19f",
+                "url": "https://wrong-url-not-working.com/really-random-url.csv",
+                "format": "csv",
+                "title": "rickroll.csv",
+                "schema": {},
+                "description": null,
+                "filetype": "file",
+                "type": "main",
+                "mime": "text/csv",
+                "filesize": 73,
+                "checksum_type": "sha1",
+                "checksum_value": "ea30d3ed445f208a5b08d23dae1976376f525d47",
+                "created_at": "2021-04-01T15:10:12",
+                "modified": "2022-07-25T15:16:56",
+                "published": "2021-04-01T15:10:12",
+                "extras": {}
+            },
+            "meta": {
+                "message_type": "resource.modified",
+                "dataset_id": "6065c5cd9f89bfd828bcbf5c"
+            }
+        }
+    },
+    {
+        "topic": "resource.modified",
+        "key": "503c39b0-58d8-45fe-ace0-55795bb0a6b7",
+        "type": "available-csv",
+        "message": {
+            "service": "udata",
+            "value": {
+                "id": "503c39b0-58d8-45fe-ace0-55795bb0a6b7",
+                "url": "https://static.data.gouv.fr/resources/nombre-de-personnes-rickrollees-sur-data-gouv-fr/20210401-182031/rickroll.csv",
+                "format": "csv",
+                "title": "rickroll.csv",
+                "schema": {},
+                "description": null,
+                "filetype": "file",
+                "type": "main",
+                "mime": "text/csv",
+                "filesize": 73,
+                "checksum_type": "sha1",
+                "checksum_value": "ea30d3ed445f208a5b08d23dae1976376f525d47",
+                "created_at": "2021-04-01T15:10:12",
+                "modified": "2022-07-25T15:16:56",
+                "published": "2021-04-01T15:10:12",
+                "extras": {}
+            },
+            "meta": {
+                "message_type": "resource.modified",
+                "dataset_id": "6065c5cd9f89bfd828bcbf5c"
             }
         }
     },
     {
         "topic": "resource.modified",
         "key": "71cacba9-4ffd-4ea8-bc3e-694425ddf006",
-        "type": "csv",
+        "type": "remote-csv",
         "message": {
             "service": "udata",
             "value": {
-                "resource": {
-                    "checksum": null,
-                    "created_at": "2021-01-12T15:45:14.597000",
-                    "description": "Synthèse des indicateurs avec leurs valeurs initiales, actuelles et cibles, ainsi que le pourcentage de progression et le taux d’avancement, à l’échelle nationale.",
-                    "extras": {
-                      "check:available": true,
-                      "check:count-availability": 75,
-                      "check:date": "2021-07-06T21:40:41.840000",
-                      "check:headers:charset": "utf-8",
-                      "check:headers:content-length": 4079,
-                      "check:headers:content-type": "text/plain",
-                      "check:status": 200,
-                      "check:url": "https://github.com/etalab/barometre-resultats-donnees/raw/master/barometre-resultats-synthese-national.csv"
-                    },
-                    "filesize": null,
-                    "filetype": "remote",
-                    "format": "csv",
-                    "id": "71cacba9-4ffd-4ea8-bc3e-694425ddf006",
-                    "last_modified": "2021-01-13T11:00:33.332000",
-                    "latest": "https://www.data.gouv.fr/fr/datasets/r/71cacba9-4ffd-4ea8-bc3e-694425ddf006",
-                    "metrics": {
-                      "views": 1
-                    },
-                    "mime": null,
-                    "preview_url": null,
-                    "published": "2021-01-12T15:45:14",
-                    "schema": {
-                      
-                    },
-                    "title": "barometre-resultats-synthese-national.csv",
-                    "type": "main",
-                    "url": "https://github.com/etalab/barometre-resultats-donnees/raw/master/barometre-resultats-synthese-national.csv"
+                "id": "71cacba9-4ffd-4ea8-bc3e-694425ddf006",
+                "url": "https://github.com/etalab/barometre-resultats-donnees/raw/master/barometre-resultats-synthese-national.csv",
+                "format": "csv",
+                "title": "barometre-resultats-synthese-national.csv",
+                "schema": {},
+                "description": "Synth\u00e8se des indicateurs avec leurs valeurs initiales, actuelles et cibles, ainsi que le pourcentage de progression et le taux d\u2019avancement, \u00e0 l\u2019\u00e9chelle nationale.",
+                "filetype": "remote",
+                "type": "main",
+                "mime": null,
+                "filesize": null,
+                "checksum_type": null,
+                "checksum_value": null,
+                "created_at": "2021-01-12T15:45:14",
+                "modified": "2022-07-25T15:21:28",
+                "published": "2021-01-12T15:45:14",
+                "extras": {
+                    "check:available": true,
+                    "check:count-availability": 75,
+                    "check:date": "2021-07-06T21:40:41",
+                    "check:headers:charset": "utf-8",
+                    "check:headers:content-length": 4079,
+                    "check:headers:content-type": "text/plain",
+                    "check:status": 200,
+                    "check:url": "https://github.com/etalab/barometre-resultats-donnees/raw/master/barometre-resultats-synthese-national.csv"
                 }
             },
             "meta": {
+                "message_type": "resource.modified",
                 "dataset_id": "5ff5e6e99724cb8fff59a5be"
             }
         }
     },
     {
         "topic": "resource.modified",
-        "key": "5c4e1452-3850-4b59-b11c-3dd51d7fb8b5",
-        "type": "csv2",
+        "key": "293b988d-639d-49c6-8d8d-4e75cfe1a412",
+        "type": "unavailable-csv",
         "message": {
             "service": "udata",
             "value": {
-                "resource": {
-                    "checksum": null,
-                    "created_at": "2021-01-12T15:45:14.597000",
-                    "description": "Synthèse des indicateurs avec leurs valeurs initiales, actuelles et cibles, ainsi que le pourcentage de progression et le taux d’avancement, à l’échelle nationale.",
-                    "extras": {
-                      "check:available": true,
-                      "check:count-availability": 75,
-                      "check:date": "2021-07-06T21:40:41.840000",
-                      "check:headers:charset": "utf-8",
-                      "check:headers:content-length": 4079,
-                      "check:headers:content-type": "text/plain",
-                      "check:status": 200,
-                      "check:url": "https://static.data.gouv.fr/resources/synthese-des-indicateurs-de-suivi-de-lepidemie-covid-19/20220622-190007/table-indicateurs-open-data-dep-2022-06-22-19h00.csv"
-                    },
-                    "filesize": null,
-                    "filetype": "remote",
-                    "format": "csv",
-                    "id": "5c4e1452-3850-4b59-b11c-3dd51d7fb8b5",
-                    "last_modified": "2021-01-13T11:00:33.332000",
-                    "latest": "https://www.data.gouv.fr/fr/datasets/r/5c4e1452-3850-4b59-b11c-3dd51d7fb8b5",
-                    "metrics": {
-                      "views": 1
-                    },
-                    "mime": null,
-                    "preview_url": null,
-                    "published": "2021-01-12T15:45:14",
-                    "schema": {
-                      
-                    },
-                    "title": "organismes",
-                    "type": "main",
-                    "url": "https://static.data.gouv.fr/resources/synthese-des-indicateurs-de-suivi-de-lepidemie-covid-19/20220622-190007/table-indicateurs-open-data-dep-2022-06-22-19h00.csv"
-                }
+                "id": "293b988d-639d-49c6-8d8d-4e75cfe1a412",
+                "url": "https://static.data.gouv.fr/resources/wrong-dataset/20220425-100653/wrong-resource.csv",
+                "format": "csv",
+                "title": "irve.csv",
+                "schema": {},
+                "description": "",
+                "filetype": "file",
+                "type": "main",
+                "mime": null,
+                "filesize": null,
+                "checksum_type": null,
+                "checksum_value": null,
+                "created_at": "2021-01-12T15:45:14",
+                "modified": "2022-07-25T15:21:28",
+                "published": "2021-01-12T15:45:14",
+                "extras": {}
             },
             "meta": {
-                "dataset_id": "60190d00a7273a8100dd4d38"
+                "message_type": "resource.modified",
+                "dataset_id": "62424dc937247670b0bf1180"
             }
         }
     },
     {
         "topic": "resource.modified",
-        "key": "1a35594a-99f2-4257-87e0-ec2f55039276",
-        "type": "xlsx",
+        "key": "ac59a0f5-fa83-4b82-bf12-3c5806d4f19f",
+        "type": "wrong-domain",
         "message": {
             "service": "udata",
             "value": {
-                "resource": {
-                    "checksum": {
-                      "type": "sha1",
-                      "value": "fd2a5e095d6f5b1c98059cf9dad376f514e95f0e"
-                    },
-                    "created_at": "2022-04-14T15:24:38.551000",
-                    "description": null,
-                    "extras": {
-                      
-                    },
-                    "filesize": 290023,
-                    "filetype": "file",
-                    "format": "xlsx",
-                    "id": "1a35594a-99f2-4257-87e0-ec2f55039276",
-                    "last_modified": "2022-04-14T15:24:40.142000",
-                    "latest": "https://www.data.gouv.fr/fr/datasets/r/1a35594a-99f2-4257-87e0-ec2f55039276",
-                    "metrics": {
-                      "views": 688
-                    },
-                    "mime": "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
-                    "preview_url": "/tabular/preview/?url=https%3A%2F%2Fstatic.data.gouv.fr%2Fresources%2Felection-presidentielle-des-10-et-24-avril-2022-resultats-definitifs-du-1er-tour%2F20220414-152438%2Fresultats-par-niveau-cirlg-t1-france-entiere.xlsx",
-                    "published": "2022-04-14T15:24:38",
-                    "schema": {
-                      
-                    },
-                    "title": "resultats-par-niveau-cirlg-t1-france-entiere.xlsx",
-                    "type": "main",
-                    "url": "https://static.data.gouv.fr/resources/election-presidentielle-des-10-et-24-avril-2022-resultats-definitifs-du-1er-tour/20220414-152438/resultats-par-niveau-cirlg-t1-france-entiere.xlsx"
-                }
+                "id": "ac59a0f5-fa83-4b82-bf12-3c5806d4f19f",
+                "url": "https://wrong-url-not-working.com/really-random-url.csv",
+                "format": "csv",
+                "title": "rickroll.csv",
+                "schema": {},
+                "description": null,
+                "filetype": "file",
+                "type": "main",
+                "mime": "text/csv",
+                "filesize": 73,
+                "checksum_type": "sha1",
+                "checksum_value": "ea30d3ed445f208a5b08d23dae1976376f525d47",
+                "created_at": "2021-04-01T15:10:12",
+                "modified": "2022-07-25T15:16:56",
+                "published": "2021-04-01T15:10:12",
+                "extras": {}
             },
             "meta": {
-                "dataset_id": "5448d3e0c751df01f85d0572"
-            }
-        }
-    },
-    {
-        "topic": "resource.modified",
-        "key": "fe9fe926-a284-484f-8f65-57ffd46f1ba4",
-        "type": "json",
-        "message": {
-            "service": "udata",
-            "value": {
-                "resource": {
-                    "checksum": null,
-                    "created_at": "2021-01-12T17:12:59.409000",
-                    "description": "Synthèse des indicateurs avec leurs valeurs initiales, actuelles et cibles, ainsi que le pourcentage de progression et le taux d’avancement, à l’échelle nationale.",
-                    "extras": {
-                      "check:available": true,
-                      "check:count-availability": 13,
-                      "check:date": "2021-06-25T14:01:09.014000",
-                      "check:headers:charset": "utf-8",
-                      "check:headers:content-length": 4788,
-                      "check:headers:content-type": "text/plain",
-                      "check:status": 200,
-                      "check:url": "https://github.com/etalab/barometre-resultats-donnees/raw/master/json/barometre-resultats-synthese-national.json"
-                    },
-                    "filesize": null,
-                    "filetype": "remote",
-                    "format": "json",
-                    "id": "fe9fe926-a284-484f-8f65-57ffd46f1ba4",
-                    "last_modified": "2021-01-13T11:01:02.132000",
-                    "latest": "https://www.data.gouv.fr/fr/datasets/r/fe9fe926-a284-484f-8f65-57ffd46f1ba4",
-                    "metrics": {
-                      "views": 4
-                    },
-                    "mime": null,
-                    "preview_url": null,
-                    "published": "2021-01-12T17:12:59",
-                    "schema": {
-                      
-                    },
-                    "title": "barometre-resultats-synthese-national.json",
-                    "type": "main",
-                    "url": "https://github.com/etalab/barometre-resultats-donnees/raw/master/json/barometre-resultats-synthese-national.json"
-                }
-            },
-            "meta": {
-                "dataset_id": "5ff5e6e99724cb8fff59a5be"
-            }
-        }
-    },
-    {
-        "topic": "resource.modified",
-        "key": "98f7cac6-6b29-4859-8739-51b825196959",
-        "type": "zip",
-        "message": {
-            "service": "udata",
-            "value": {
-                "resource": {
-                    "checksum": {
-                      "type": "sha1",
-                      "value": "a4ca4d9b4f5bee00de049cb73cc0abe8cbcfc52a"
-                    },
-                    "created_at": "2016-06-13T14:20:43.722000",
-                    "description": "Archive ZIP qui regroupe :\n-\tLa liste des produits autorisés ou retirés avec leurs AMM et leurs types de classification. (Fichiers : produits_ … .csv)\n\n-\tLa liste des usages des produits (hors MFSC). Il existe une ligne par usage et produit. Un même produit se retrouve donc sur plusieurs lignes (une par usage du produit). Le tableau contient les produits autorisés et retirés. (Fichiers : produits_usages_ … .csv)\n\n-\tLa liste des usages des produits (hors MFSC) autorisés. Il existe une ligne par usage et produit. Un même produit se retrouve donc sur plusieurs lignes (une par usage du produit). Le tableau contient uniquement les produits autorisés, mais informe sur tous les usages autorisés ou retirés de ce produit. (Fichiers : usages_des_produits_autorises_ … .csv)\n\n-\tLa liste des phrases de risque des produits. (Fichiers : produits_phrases_de_risque_ … .csv)\n\n-\tLa liste des substances actives. (Fichiers : substance_active_ … .csv)\n\n-\tLa liste des conditions d’emploi des produits. Il existe une ligne par conditions d’emploi et produit. Un même produit se retrouve donc sur plusieurs lignes (une par conditions d’emploi du produit). (Fichiers produits_condition_emploi_ … .csv)\n\n-\tLa liste des classes et des mentions danger des produits (hors MFSC). Il existe une ligne par classes – mentions dangers et produit. Un même produit se retrouve donc sur plusieurs lignes. (Fichiers produits_classe_et_mention_danger_ … .csv)\n\n-\tLa liste des usages des MFSC et produits mixtes. Il existe une ligne par usage et produit. Un même produit se retrouve donc sur plusieurs lignes (une par usage du produit). (Fichiers mfsc_et_mixte_usage_ … .csv)\n\n-\tLa liste des compositions des MFSC et produits mixtes. (Fichiers mfsc_et_mixte_composition_ … .csv)",
-                    "extras": {
-                      "check:available": true,
-                      "check:count-availability": 18,
-                      "check:date": "2022-01-16T13:11:00.319000",
-                      "check:status": 204,
-                      "check:url": "https://static.data.gouv.fr/resources/donnees-ouvertes-du-catalogue-des-produits-phytopharmaceutiques-adjuvants-matieres-fertilisantes-et-support-de-culture-produits-mixtes-et-melanges-e-phy/20180926-104236/usages-des-produits-autorises-v2-windows-1252.csv"
-                    },
-                    "filesize": 6626005,
-                    "filetype": "file",
-                    "format": "zip",
-                    "id": "98f7cac6-6b29-4859-8739-51b825196959",
-                    "last_modified": "2022-04-22T15:37:17.098000",
-                    "latest": "https://www.data.gouv.fr/fr/datasets/r/98f7cac6-6b29-4859-8739-51b825196959",
-                    "metrics": {
-                      "nb_hits": 0,
-                      "nb_uniq_visitors": 0,
-                      "nb_visits": 0,
-                      "views": 113
-                    },
-                    "mime": "application/zip",
-                    "preview_url": null,
-                    "published": "2022-04-22T15:37:05",
-                    "schema": {
-                      
-                    },
-                    "title": "decisionamm-intrant-format-csv-20220422.zip",
-                    "type": "main",
-                    "url": "https://static.data.gouv.fr/resources/donnees-ouvertes-du-catalogue-e-phy-des-produits-phytopharmaceutiques-matieres-fertilisantes-et-supports-de-culture-adjuvants-produits-mixtes-et-melanges/20220422-153704/decisionamm-intrant-format-csv-20220422.zip"
-                }
-            },
-            "meta": {
-                "dataset_id": "575e9fac88ee38072a640390"
+                "message_type": "resource.modified",
+                "dataset_id": "6065c5cd9f89bfd828bcbf5c"
             }
         }
     },
     {
         "topic": "resource.deleted",
-        "key": "8d9398ae-3037-48b2-be19-412c24561fbb",
-        "type": "csv",
+        "key": "503c39b0-58d8-45fe-ace0-55795bb0a6b7",
+        "type": "available-csv",
         "message": {
             "service": "udata",
             "value": {
             },
             "meta": {
-                "dataset_id": "5448d3e0c751df01f85d0572"
+                "dataset_id": "6065c5cd9f89bfd828bcbf5c",
+                "message_type": "resource.deleted"
+            }
+        }
+    },
+    {
+        "topic": "resource.deleted",
+        "key": "71cacba9-4ffd-4ea8-bc3e-694425ddf006",
+        "type": "remote-csv",
+        "message": {
+            "service": "udata",
+            "value": {
+            },
+            "meta": {
+                "dataset_id": "5ff5e6e99724cb8fff59a5be",
+                "message_type": "resource.deleted"
+            }
+        }
+    },
+    {
+        "topic": "resource.deleted",
+        "key": "293b988d-639d-49c6-8d8d-4e75cfe1a412",
+        "type": "unavailable-csv",
+        "message": {
+            "service": "udata",
+            "value": {
+            },
+            "meta": {
+                "dataset_id": "62424dc937247670b0bf1180",
+                "message_type": "resource.deleted"
+            }
+        }
+    },
+    {
+        "topic": "resource.deleted",
+        "key": "ac59a0f5-fa83-4b82-bf12-3c5806d4f19f",
+        "type": "wrong-domain",
+        "message": {
+            "service": "udata",
+            "value": {
+            },
+            "meta": {
+                "dataset_id": "6065c5cd9f89bfd828bcbf5c",
+                "message_type": "resource.deleted"
             }
         }
     },
     {
         "topic": "resource.checked",
-        "key": "293b988d-639d-49c6-8d8d-4e75cfe1a412",
-        "type": "csv",
+        "key": "503c39b0-58d8-45fe-ace0-55795bb0a6b7",
+        "type": "available-csv",
         "message": {
-            "service": "decapode",
+            "service": "udata-hydra",
             "value": {
-                "url": "https://www.data.gouv.fr/fr/datasets/r/79b5cac4-4957-486b-bbda-322d80868224",
-                "domain": "www.data.gouv.fr",
+                "url": "https://static.data.gouv.fr/resources/nombre-de-personnes-rickrollees-sur-data-gouv-fr/20210401-182031/rickroll.csv",
+                "domain": "static.data.gouv.fr",
                 "status": 200,
                 "headers": {
                     "server": "nginx",
-                    "date": "Mon, 02 May 2022 09:58:47 GMT",
-                    "content-type": "text/plain",
-                    "last-modified": "Thu, 14 Apr 2022 13:25:45 GMT",
-                    "vary": "Accept-Encoding",
-                    "etag": "W/\"625820d9-22c64e2\"",
-                    "expires": "Wed, 01 Jun 2022 09:58:47 GMT",
+                    "date": "Mon, 25 Jul 2022 13:17:26 GMT",
+                    "content-type": "text/csv",
+                    "content-length": "73",
+                    "last-modified": "Thu, 01 Apr 2021 16:20:31 GMT",
+                    "etag": "\"6065f2cf-49\"",
+                    "expires": "Wed, 24 Aug 2022 13:17:26 GMT",
                     "cache-control": "max-age=2592000",
                     "content-disposition": "attachment",
                     "pragma": "public",
@@ -496,126 +341,253 @@
                     "access-control-allow-methods": "GET, OPTIONS",
                     "access-control-allow-headers": "Origin,Authorization,Accept,DNT,User-Agent,If-Modified-Since,Cache-Control,Content-Type,Range",
                     "access-control-allow-credentials": "true",
-                    "content-encoding": "gzip"
+                    "accept-ranges": "bytes"
                 },
                 "timeout": false,
-                "response_time": 0.16390085220336914
+                "response_time": 0.1744225025177002
             },
             "meta": {
-                "dataset_id": "62424dc937247670b0bf1180",
-                "message_type": "event-update"
+                "dataset_id": "6065c5cd9f89bfd828bcbf5c",
+                "message_type": "event-update",
+                "check_date": "2022-07-25 13:17:27.291064"
             }
         }
     },
     {
-        "topic": "resource.checked.unavailable",
-        "key": "293b988d-639d-49c6-8d8d-4e75cfe1a412",
-        "type": "csv",
+        "topic": "resource.checked",
+        "key": "71cacba9-4ffd-4ea8-bc3e-694425ddf006",
+        "type": "remote-csv",
         "message": {
-            "service": "decapode",
+            "service": "udata-hydra",
             "value": {
-                "url": "https://static.data.gouv.fr/resources/fichier-consolide-des-bornes-de-recharge-pour-vehicules-electriques/20220425-100653/consolidation-etalab-schema-irve-v-2.0.2-20220425.csv",
+                "url": "https://github.com/etalab/barometre-resultats-donnees/raw/master/barometre-resultats-synthese-national.csv",
+                "domain": "github.com",
+                "status": 200,
+                "headers": {
+                    "connection": "keep-alive",
+                    "content-length": "5208",
+                    "cache-control": "max-age=300",
+                    "content-security-policy": "default-src 'none'; style-src 'unsafe-inline'; sandbox",
+                    "content-type": "text/plain; charset=utf-8",
+                    "etag": "W/\"a046b22215e113bbcfa618895392dbd976667337181be064e29d16a16f12a799\"",
+                    "strict-transport-security": "max-age=31536000",
+                    "x-content-type-options": "nosniff",
+                    "x-frame-options": "deny",
+                    "x-xss-protection": "1; mode=block",
+                    "x-github-request-id": "9EC0:817B:FEA048:1125273:62DE98AC",
+                    "content-encoding": "gzip",
+                    "accept-ranges": "bytes",
+                    "date": "Mon, 25 Jul 2022 13:22:27 GMT",
+                    "via": "1.1 varnish",
+                    "x-served-by": "cache-cdg20729-CDG",
+                    "x-cache": "HIT",
+                    "x-cache-hits": "1",
+                    "x-timer": "S1658755348.746702,VS0,VE1",
+                    "vary": "Authorization,Accept-Encoding,Origin",
+                    "access-control-allow-origin": "*",
+                    "x-fastly-request-id": "48185ef68f962542d4823203b2f28e54eddf45c7",
+                    "expires": "Mon, 25 Jul 2022 13:27:27 GMT",
+                    "source-age": "103"
+                },
+                "timeout": false,
+                "response_time": 0.2683839797973633
+            },
+            "meta": {
+                "dataset_id": "5ff5e6e99724cb8fff59a5be",
+                "message_type": "event-update",
+                "check_date": "2022-07-25 13:22:27.839714"
+            }
+        }
+    },
+    {
+        "topic": "resource.checked",
+        "key": "293b988d-639d-49c6-8d8d-4e75cfe1a412",
+        "type": "unavailable-csv",
+        "message": {
+            "service": "udata-hydra",
+            "value": {
+                "url": "https://static.data.gouv.fr/resources/wrong-dataset/20220425-100653/wrong-resource.csv",
                 "domain": "static.data.gouv.fr",
                 "timeout": false,
                 "error": "Not Found",
                 "headers": {
                     "server": "nginx",
-                    "date": "Mon, 02 May 2022 09:55:46 GMT",
+                    "date": "Mon, 25 Jul 2022 15:44:35 GMT",
                     "content-type": "text/html",
-                    "content-length": "162"
+                    "content-length": "146"
                 },
                 "status": 404
             },
             "meta": {
                 "dataset_id": "62424dc937247670b0bf1180",
-                "message_type": "event-update"
+                "message_type": "event-update",
+                "check_date": "2022-07-25 15:44:35.356354"
+            }
+        }
+    },
+    {
+        "topic": "resource.checked",
+        "key": "ac59a0f5-fa83-4b82-bf12-3c5806d4f19f",
+        "type": "wrong-domain",
+        "message": {
+            "service": "udata-hydra",
+            "value": {
+                "url": "https://wrong-url-not-working.com/really-random-url.csv",
+                "domain": "wrong-url-not-working.com",
+                "timeout": false,
+                "error": "Cannot connect to host wrong-url-not-working.com:443 ssl:default [Name or service not known]",
+                "headers": {},
+                "status": null
+            },
+            "meta": {
+                "dataset_id": "6065c5cd9f89bfd828bcbf5c",
+                "message_type": "event-update",
+                "check_date": "2022-07-25 13:24:28.030313"
             }
         }
     },
     {
         "topic": "resource.analysed",
-        "key": "8d9398ae-3037-48b2-be19-412c24561fbb",
-        "type": "csv",
+        "key": "503c39b0-58d8-45fe-ace0-55795bb0a6b7",
+        "type": "available-csv",
         "message": {
             "service": "datalake",
             "value": {
+                "error": null,
+                "filesize": 73,
                 "mime": "text/plain",
-                "resource_url": "https://static.data.gouv.fr/resources/fichier-consolide-des-bornes-de-recharge-pour-vehicules-electriques/20220425-100653/consolidation-etalab-schema-irve-v-2.0.2-20220425.csv"
+                "resource_url": "https://static.data.gouv.fr/resources/nombre-de-personnes-rickrollees-sur-data-gouv-fr/20210401-182031/rickroll.csv"
             },
             "meta": {
-                "dataset_id": "5448d3e0c751df01f85d0572"
+                "dataset_id": "6065c5cd9f89bfd828bcbf5c",
+                "message_type": "resource.analysed"
+            }
+        }
+    },
+    {
+        "topic": "resource.analysed",
+        "key": "71cacba9-4ffd-4ea8-bc3e-694425ddf006",
+        "type": "remote-csv",
+        "message": {
+            "service": "datalake",
+            "value": {
+                "error": null,
+                "filesize": 15757,
+                "mime": "application/csv",
+                "resource_url": "https://github.com/etalab/barometre-resultats-donnees/raw/master/barometre-resultats-synthese-national.csv"
+            },
+            "meta": {
+                "dataset_id": "5ff5e6e99724cb8fff59a5be",
+                "message_type": "resource.analysed"
+            }        
+        }
+    },
+    {
+        "topic": "resource.stored",
+        "key": "503c39b0-58d8-45fe-ace0-55795bb0a6b7",
+        "type": "available-csv",
+        "message": {
+            "service": "datalake",
+            "value": {
+                "location": {
+                    "netloc": "http://minio:9000/",
+                    "bucket": "udata",
+                    "key": "data/6065c5cd9f89bfd828bcbf5c/ac59a0f5-fa83-4b82-bf12-3c5806d4f19f"
+                },
+                "mime_type": "text/plain",
+                "filesize": 73,
+                "delimiter": ";",
+                "encoding": "ASCII"
+            },
+            "meta": {
+                "dataset_id": "6065c5cd9f89bfd828bcbf5c",
+                "message_type": "resource.stored"
             }
         }
     },
     {
         "topic": "resource.stored",
-        "key": "8d9398ae-3037-48b2-be19-412c24561fbb",
-        "type": "csv",
+        "key": "71cacba9-4ffd-4ea8-bc3e-694425ddf006",
+        "type": "remote-csv",
         "message": {
             "service": "datalake",
             "value": {
                 "location": {
-                    "netloc": "https://localhost:9001/",
-                    "bucket": "sample",
-                    "key": "folder/conso-irve.csv"
-                }
+                    "netloc": "http://minio:9000/",
+                    "bucket": "udata",
+                    "key": "data/5ff5e6e99724cb8fff59a5be/71cacba9-4ffd-4ea8-bc3e-694425ddf006"
+                },
+                "mime_type": "application/csv",
+                "filesize": 15757,
+                "delimiter": ",",
+                "encoding": "UTF-8"
             },
             "meta": {
-                "dataset_id": "5448d3e0c751df01f85d0572"
+                "dataset_id": "5ff5e6e99724cb8fff59a5be",
+                "message_type": "resource.stored"
+            }
+        
+        }
+    },
+    {
+        "topic": "resource.analysed",
+        "key": "503c39b0-58d8-45fe-ace0-55795bb0a6b7",
+        "type": "available-csv",
+        "message": {
+            "service": "csvdetective",
+            "value": {
+                "data_location": {
+                    "url": "http://minio:9000/",
+                    "bucket": "udata",
+                    "key": "data/6065c5cd9f89bfd828bcbf5c/503c39b0-58d8-45fe-ace0-55795bb0a6b7"
+                },
+                "report_location": {
+                    "url": "http://minio:9000/",
+                    "bucket": "udata",
+                    "key": "report/6065c5cd9f89bfd828bcbf5c/503c39b0-58d8-45fe-ace0-55795bb0a6b7.json"
+                },
+                "tableschema_location": {
+                    "url": "http://minio:9000/",
+                    "bucket": "udata",
+                    "key": "schemas/6065c5cd9f89bfd828bcbf5c/503c39b0-58d8-45fe-ace0-55795bb0a6b7"
+                },
+                "encoding": "ASCII",
+                "delimiter": ";"
+            },
+            "meta": {
+                "dataset_id": "6065c5cd9f89bfd828bcbf5c",
+                "message_type": "resource.analysed"
             }
         }
     },
     {
         "topic": "resource.analysed",
-        "key": "8d9398ae-3037-48b2-be19-412c24561fbb",
-        "type": "irve",
+        "key": "71cacba9-4ffd-4ea8-bc3e-694425ddf006",
+        "type": "remote-csv",
         "message": {
             "service": "csvdetective",
             "value": {
-                "url": "http://minio:9000/",
-                "bucket": "geoffrey",
-                "data": "data/5448d3e0c751df01f85d0572/8d9398ae-3037-48b2-be19-412c24561fbb",
-                "key": "report/5448d3e0c751df01f85d0572/8d9398ae-3037-48b2-be19-412c24561fbb.json",
-                "schema": "schemas/5448d3e0c751df01f85d0572/8d9398ae-3037-48b2-be19-412c24561fbb_0.0.1.json"
+                "data_location": {
+                    "url": "http://minio:9000/",
+                    "bucket": "udata",
+                    "key": "data/5ff5e6e99724cb8fff59a5be/71cacba9-4ffd-4ea8-bc3e-694425ddf006"
+                },
+                "report_location": {
+                    "url": "http://minio:9000/",
+                    "bucket": "udata",
+                    "key": "report/5ff5e6e99724cb8fff59a5be/71cacba9-4ffd-4ea8-bc3e-694425ddf006.json"
+                },
+                "tableschema_location": {
+                    "url": "http://minio:9000/",
+                    "bucket": "udata",
+                    "key": "schemas/5ff5e6e99724cb8fff59a5be/71cacba9-4ffd-4ea8-bc3e-694425ddf006"
+                },
+                "encoding": "UTF-8",
+                "delimiter": ","
             },
             "meta": {
-                "dataset_id": "5448d3e0c751df01f85d0572"
-            }
-        }
-    },
-    {
-        "topic": "resource.analysed",
-        "key": "5c4e1452-3850-4b59-b11c-3dd51d7fb8b5",
-        "type": "spf",
-        "message": {
-            "service": "csvdetective",
-            "value": {
-                "url": "http://minio:9000/",
-                "bucket": "geoffrey",
-                "data": "data/60190d00a7273a8100dd4d38/5c4e1452-3850-4b59-b11c-3dd51d7fb8b5",
-                "key": "report/60190d00a7273a8100dd4d38/5c4e1452-3850-4b59-b11c-3dd51d7fb8b5.json",
-                "schema": "schemas/60190d00a7273a8100dd4d38/5c4e1452-3850-4b59-b11c-3dd51d7fb8b5_0.0.1.json"
-            },
-            "meta": {
-                "dataset_id": "60190d00a7273a8100dd4d38"
-            }
-        }
-    },
-    {
-        "topic": "resource.analysed",
-        "key": "0845c838-6f18-40c3-936f-da204107759a",
-        "type": "ods",
-        "message": {
-            "service": "csvdetective",
-            "value": {
-                "url": "http://minio:9000/",
-                "bucket": "geoffrey",
-                "data": "data/5a4e60f2b595080ee8014056/0845c838-6f18-40c3-936f-da204107759a",
-                "key": "report/5a4e60f2b595080ee8014056/0845c838-6f18-40c3-936f-da204107759a.json",
-                "schema": "schemas/5a4e60f2b595080ee8014056/0845c838-6f18-40c3-936f-da204107759a_0.0.1.json"
-            },
-            "meta": {
-                "dataset_id": "5a4e60f2b595080ee8014056"
+                "dataset_id": "5ff5e6e99724cb8fff59a5be",
+                "message_type": "resource.analysed"
             }
         }
     }
