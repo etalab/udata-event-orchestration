@@ -11,7 +11,7 @@ with open('messages.json') as fp:
 KAFKA_HOST = os.environ.get("KAFKA_HOST", "localhost")
 KAFKA_PORT = os.environ.get("KAFKA_PORT", "9092")
 
-PREFIX_TOPIC = os.environ.get("UDATA_INSTANCE_NAME", "")
+PREFIX_TOPIC = os.environ.get("UDATA_INSTANCE_NAME", "udata")
 
 @click.group()
 @click.version_option()
