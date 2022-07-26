@@ -24,7 +24,7 @@
                 "extras": {}
             },
             "meta": {
-                "message_type": "resource.modified",
+                "message_type": "resource.created",
                 "dataset_id": "6065c5cd9f89bfd828bcbf5c"
             }
         }
@@ -123,7 +123,7 @@
                 "extras": {}
             },
             "meta": {
-                "message_type": "resource.modified",
+                "message_type": "resource.created",
                 "dataset_id": "6065c5cd9f89bfd828bcbf5c"
             }
         }
@@ -325,12 +325,12 @@
                 "status": 200,
                 "headers": {
                     "server": "nginx",
-                    "date": "Mon, 25 Jul 2022 13:17:26 GMT",
+                    "date": "Mon, 25 Jul 2022 17:47:03 GMT",
                     "content-type": "text/csv",
                     "content-length": "73",
                     "last-modified": "Thu, 01 Apr 2021 16:20:31 GMT",
                     "etag": "\"6065f2cf-49\"",
-                    "expires": "Wed, 24 Aug 2022 13:17:26 GMT",
+                    "expires": "Wed, 24 Aug 2022 17:47:03 GMT",
                     "cache-control": "max-age=2592000",
                     "content-disposition": "attachment",
                     "pragma": "public",
@@ -344,12 +344,12 @@
                     "accept-ranges": "bytes"
                 },
                 "timeout": false,
-                "response_time": 0.1744225025177002
+                "response_time": 0.07686996459960938,
+                "check_date": "2022-07-25 17:47:03.510742"
             },
             "meta": {
                 "dataset_id": "6065c5cd9f89bfd828bcbf5c",
-                "message_type": "event-update",
-                "check_date": "2022-07-25 13:17:27.291064"
+                "message_type": "event-update"
             }
         }
     },
@@ -374,28 +374,28 @@
                     "x-content-type-options": "nosniff",
                     "x-frame-options": "deny",
                     "x-xss-protection": "1; mode=block",
-                    "x-github-request-id": "9EC0:817B:FEA048:1125273:62DE98AC",
+                    "x-github-request-id": "F542:D2E3:7FE601:91CA71:62DED8C1",
                     "content-encoding": "gzip",
                     "accept-ranges": "bytes",
-                    "date": "Mon, 25 Jul 2022 13:22:27 GMT",
+                    "date": "Mon, 25 Jul 2022 17:54:09 GMT",
                     "via": "1.1 varnish",
-                    "x-served-by": "cache-cdg20729-CDG",
-                    "x-cache": "HIT",
-                    "x-cache-hits": "1",
-                    "x-timer": "S1658755348.746702,VS0,VE1",
+                    "x-served-by": "cache-cdg20776-CDG",
+                    "x-cache": "MISS",
+                    "x-cache-hits": "0",
+                    "x-timer": "S1658771649.117946,VS0,VE247",
                     "vary": "Authorization,Accept-Encoding,Origin",
                     "access-control-allow-origin": "*",
-                    "x-fastly-request-id": "48185ef68f962542d4823203b2f28e54eddf45c7",
-                    "expires": "Mon, 25 Jul 2022 13:27:27 GMT",
-                    "source-age": "103"
+                    "x-fastly-request-id": "832037959b1d312abb265c1129af6c575a831a81",
+                    "expires": "Mon, 25 Jul 2022 17:59:09 GMT",
+                    "source-age": "0"
                 },
                 "timeout": false,
-                "response_time": 0.2683839797973633
+                "response_time": 0.3551778793334961,
+                "check_date": "2022-07-25 17:54:09.400405"
             },
             "meta": {
                 "dataset_id": "5ff5e6e99724cb8fff59a5be",
-                "message_type": "event-update",
-                "check_date": "2022-07-25 13:22:27.839714"
+                "message_type": "event-update"
             }
         }
     },
@@ -416,12 +416,12 @@
                     "content-type": "text/html",
                     "content-length": "146"
                 },
-                "status": 404
+                "status": 404,
+                "check_date": "2022-07-25 15:44:35.356354"
             },
             "meta": {
                 "dataset_id": "62424dc937247670b0bf1180",
-                "message_type": "event-update",
-                "check_date": "2022-07-25 15:44:35.356354"
+                "message_type": "event-update"
             }
         }
     },
@@ -437,12 +437,12 @@
                 "timeout": false,
                 "error": "Cannot connect to host wrong-url-not-working.com:443 ssl:default [Name or service not known]",
                 "headers": {},
-                "status": null
+                "status": null,
+                "check_date": "2022-07-25 13:24:28.030313"
             },
             "meta": {
                 "dataset_id": "6065c5cd9f89bfd828bcbf5c",
-                "message_type": "event-update",
-                "check_date": "2022-07-25 13:24:28.030313"
+                "message_type": "event-update"
             }
         }
     },
@@ -451,7 +451,7 @@
         "key": "503c39b0-58d8-45fe-ace0-55795bb0a6b7",
         "type": "available-csv",
         "message": {
-            "service": "datalake",
+            "service": "udata-hydra",
             "value": {
                 "error": null,
                 "filesize": 73,
@@ -469,7 +469,7 @@
         "key": "71cacba9-4ffd-4ea8-bc3e-694425ddf006",
         "type": "remote-csv",
         "message": {
-            "service": "datalake",
+            "service": "udata-hydra",
             "value": {
                 "error": null,
                 "filesize": 15757,
@@ -479,7 +479,7 @@
             "meta": {
                 "dataset_id": "5ff5e6e99724cb8fff59a5be",
                 "message_type": "resource.analysed"
-            }        
+            }
         }
     },
     {
@@ -487,12 +487,12 @@
         "key": "503c39b0-58d8-45fe-ace0-55795bb0a6b7",
         "type": "available-csv",
         "message": {
-            "service": "datalake",
+            "service": "udata-hydra",
             "value": {
-                "location": {
+                "data_location": {
                     "netloc": "http://minio:9000/",
                     "bucket": "udata",
-                    "key": "data/6065c5cd9f89bfd828bcbf5c/ac59a0f5-fa83-4b82-bf12-3c5806d4f19f"
+                    "key": "data/6065c5cd9f89bfd828bcbf5c/503c39b0-58d8-45fe-ace0-55795bb0a6b7"
                 },
                 "mime_type": "text/plain",
                 "filesize": 73,
@@ -510,9 +510,9 @@
         "key": "71cacba9-4ffd-4ea8-bc3e-694425ddf006",
         "type": "remote-csv",
         "message": {
-            "service": "datalake",
+            "service": "udata-hydra",
             "value": {
-                "location": {
+                "data_location": {
                     "netloc": "http://minio:9000/",
                     "bucket": "udata",
                     "key": "data/5ff5e6e99724cb8fff59a5be/71cacba9-4ffd-4ea8-bc3e-694425ddf006"
@@ -526,7 +526,6 @@
                 "dataset_id": "5ff5e6e99724cb8fff59a5be",
                 "message_type": "resource.stored"
             }
-        
         }
     },
     {
@@ -537,17 +536,17 @@
             "service": "csvdetective",
             "value": {
                 "data_location": {
-                    "url": "http://minio:9000/",
+                    "netloc": "http://minio:9000/",
                     "bucket": "udata",
                     "key": "data/6065c5cd9f89bfd828bcbf5c/503c39b0-58d8-45fe-ace0-55795bb0a6b7"
                 },
                 "report_location": {
-                    "url": "http://minio:9000/",
+                    "netloc": "http://minio:9000/",
                     "bucket": "udata",
                     "key": "report/6065c5cd9f89bfd828bcbf5c/503c39b0-58d8-45fe-ace0-55795bb0a6b7.json"
                 },
                 "tableschema_location": {
-                    "url": "http://minio:9000/",
+                    "netloc": "http://minio:9000/",
                     "bucket": "udata",
                     "key": "schemas/6065c5cd9f89bfd828bcbf5c/503c39b0-58d8-45fe-ace0-55795bb0a6b7"
                 },
@@ -568,17 +567,17 @@
             "service": "csvdetective",
             "value": {
                 "data_location": {
-                    "url": "http://minio:9000/",
+                    "netloc": "http://minio:9000/",
                     "bucket": "udata",
                     "key": "data/5ff5e6e99724cb8fff59a5be/71cacba9-4ffd-4ea8-bc3e-694425ddf006"
                 },
                 "report_location": {
-                    "url": "http://minio:9000/",
+                    "netloc": "http://minio:9000/",
                     "bucket": "udata",
                     "key": "report/5ff5e6e99724cb8fff59a5be/71cacba9-4ffd-4ea8-bc3e-694425ddf006.json"
                 },
                 "tableschema_location": {
-                    "url": "http://minio:9000/",
+                    "netloc": "http://minio:9000/",
                     "bucket": "udata",
                     "key": "schemas/5ff5e6e99724cb8fff59a5be/71cacba9-4ffd-4ea8-bc3e-694425ddf006"
                 },
