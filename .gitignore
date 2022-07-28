@@ -7,3 +7,8 @@ csvapi/csvapi
 csvapi/dbs/*
 minio-data/
 export-resource.csv
+
+# Python generated files
+*.egg
+*.egg-info
+*.py[cod]
