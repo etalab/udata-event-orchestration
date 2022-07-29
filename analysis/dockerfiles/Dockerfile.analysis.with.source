@@ -2,8 +2,6 @@ FROM python:3.9
 
 WORKDIR /app
 
-RUN pip install csv-detective==0.4.3
-
 RUN pip install flit
 
 COPY ./udata-analysis-service/ .
