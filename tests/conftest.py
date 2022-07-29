@@ -10,7 +10,7 @@ KAFKA_PORT = os.environ.get("KAFKA_PORT", "9092")
 
 @pytest.fixture
 def messages():
-    with open("tests/messages.json", "r") as f:
+    with open("udata_event_orchestration/messages.json", "r") as f:
         return json.load(f)
 
 @pytest.fixture

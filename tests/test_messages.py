@@ -1,6 +1,7 @@
 import json
 from datetime import date
 from dateutil.parser import parse as parse_dt
+import os
 import time
 
 from kafka import TopicPartition
@@ -8,6 +9,10 @@ import pytest
 
 
 PREFIX_TOPIC = 'udata'
+
+# Override this value with an env variable if you have a different value in udata-hydra crawler
+SLEEP_BETWEEN_BATCHES = int(os.environ.get("SLEEP_BETWEEN_BATCHES", 60))
+
 
 def get_message(messages, topic, resource_type, service=None):
     '''
@@ -27,7 +32,7 @@ def test_send_available_resource_created(producer, consumer, messages):
     resource_id = sending_message['key']
     resource_url = sending_message['message']['value']['url']
 
-    # consumer.subscribe([f'{PREFIX_TOPIC}.resource.analysed', f'{PREFIX_TOPIC}.resource.stored', f'{PREFIX_TOPIC}.resource.stored'])
+    # Prepare consumer
     tp_analysed = TopicPartition(f'{PREFIX_TOPIC}.resource.analysed', 0)
     tp_stored = TopicPartition(f'{PREFIX_TOPIC}.resource.stored', 0)
     tp_checked = TopicPartition(f'{PREFIX_TOPIC}.resource.checked', 0)
@@ -40,27 +45,32 @@ def test_send_available_resource_created(producer, consumer, messages):
                    key=bytes(sending_message['key'],encoding='utf8')
     )
 
-    # TODO: Slightly more than SLEEP_BETWEEN_BATCHES set in udata-hydra
-    SLEEP_BETWEEN_BATCHES = 10
+    # Make sure that udata-hydra crawler has time to crawl the url
     time.sleep(SLEEP_BETWEEN_BATCHES + 1)
 
+    # Poll messages
     consumed = consumer.poll(1000 * (SLEEP_BETWEEN_BATCHES + 1))
     
+    # Assert expected number of messages have been consumed
     assert len(consumed[tp_analysed]) == 2
     assert len(consumed[tp_stored]) == 1
     assert len(consumed[tp_checked]) == 1
 
+    # Assert analysed message sent by hydra service
     analysed_hydra = json.loads(consumed[tp_analysed][0].value)
     assert analysed_hydra['service'] == 'udata-hydra'
     assert analysed_hydra == get_message(messages, 'resource.analysed', resource_type, 'udata-hydra')['message']
 
+    # Assert analysed message sent by csv detective
     analysed_detective = json.loads(consumed[tp_analysed][1].value)
     assert analysed_detective['service'] == 'csvdetective'
     assert analysed_detective == get_message(messages, 'resource.analysed', resource_type, 'csvdetective')['message']
 
+    # Assert stored message
     stored = json.loads(consumed[tp_stored][0].value)
     assert stored == get_message(messages, 'resource.stored', resource_type)['message']
 
+    # Assert checked message, ignoring date-dependent values
     checked = json.loads(consumed[tp_checked][0].value)
     assert parse_dt(checked['value'].pop('check_date')).date() == date.today()
     checked['value'].pop('headers')
