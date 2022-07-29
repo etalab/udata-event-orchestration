@@ -15,6 +15,6 @@ setup(
     install_requires=read_requirements(),
     entry_points='''
         [console_scripts]
-        uket=udata_kafka_event_testing.cli:cli
+        uket=udata_event_orchestration.cli:cli
     '''
 )
