@@ -5,7 +5,7 @@ import os
 from kafka import KafkaConsumer, KafkaProducer
 import json
 
-with open('messages.json') as fp:
+with open('udata_event_orchestration/messages.json') as fp:
     messages = json.load(fp)
 
 KAFKA_HOST = os.environ.get("KAFKA_HOST", "localhost")
