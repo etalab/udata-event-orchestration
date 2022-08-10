@@ -1,9 +1,5 @@
-hydra/.env.hydra
-hydra/udata-hydra
-analysis/.env.analysis
-analysis/udata-analysis-service
-csvapi/.env.csvapi
-csvapi/csvapi
+config/.env.*
+!config/.env.*.example
 csvapi/dbs/*
 minio-data/
 export-resource.csv

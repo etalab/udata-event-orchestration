@@ -53,9 +53,7 @@ services:
     command: server /data
 
   hydra-postgres:
-    build:
-     context: ./hydra/
-     dockerfile: dockerfiles/Dockerfile.hydra.postgres
+    build: dockerfiles/hydra/Dockerfile.hydra.postgres
     container_name: hydra-postgres
     restart: always
     environment:
@@ -67,11 +65,9 @@ services:
       retries: 5
 
   hydra-consumer:
-    build:
-      context: ./hydra/
-      dockerfile: dockerfiles/Dockerfile.hydra.with.source
+    build: dockerfiles/hydra/Dockerfile.hydra.with.source
     env_file:
-      - ./hydra/.env.hydra
+      - ./config/.env.hydra
     depends_on:
       hydra-postgres:
         condition: service_healthy
@@ -79,11 +75,9 @@ services:
     entrypoint: udata-hydra run-kafka-integration
 
   hydra-crawler:
-    build:
-      context: ./hydra/
-      dockerfile: dockerfiles/Dockerfile.hydra.with.source
+    build: dockerfiles/hydra/Dockerfile.hydra.with.source
     env_file:
-      - ./hydra/.env.hydra
+      - ./config/.env.hydra
     depends_on:
       hydra-postgres:
         condition: service_healthy
@@ -96,20 +90,16 @@ services:
     command: ["redis-server", "--bind", "0.0.0.0", "--port", "6380"]
 
   analysis-consumer:
-    build:
-      context: ./analysis/
-      dockerfile: dockerfiles/Dockerfile.analysis.with.source
+    build: dockerfiles/analysis/Dockerfile.analysis.with.source
     env_file:
-      - ./analysis/.env.analysis
+      - ./config/.env.analysis
     container_name: analysis-consumer
     entrypoint: udata-analysis-service consume
 
   analysis-worker:
-    build:
-      context: ./analysis/
-      dockerfile: dockerfiles/Dockerfile.analysis.with.source
+    build: dockerfiles/analysis/Dockerfile.analysis.with.source
     env_file:
-      - ./analysis/.env.analysis
+      - ./config/.env.analysis
     container_name: analysis-worker
     entrypoint: udata-analysis-service work
 
@@ -119,11 +109,9 @@ services:
     command: ["redis-server", "--bind", "0.0.0.0", "--port", "6380"]
 
   csvapi-server:
-    build:
-      context: ./csvapi/
-      dockerfile: dockerfiles/Dockerfile.csvapi.with.source
+    build: dockerfiles/csvapi/Dockerfile.csvapi.with.source
     env_file:
-      - ./csvapi/.env.csvapi
+      - ./config/.env.csvapi
     ports:
       - 8000:8000
     container_name: csvapi-server
@@ -132,13 +120,10 @@ services:
     entrypoint: csvapi serve -h 0.0.0.0 -p 8000
 
   csvapi-consumer:
-    build:
-      context: ./csvapi/
-      dockerfile: dockerfiles/Dockerfile.csvapi.with.source
+    build: dockerfiles/csvapi/Dockerfile.csvapi.with.source
     env_file:
-      - ./csvapi/.env.csvapi
+      - ./config/.env.csvapi
     container_name: csvapi-consumer
     volumes:
       - ./csvapi/dbs:/app/dbs
     entrypoint: csvapi consume
-
