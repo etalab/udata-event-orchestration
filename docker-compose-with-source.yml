@@ -53,7 +53,9 @@ services:
     command: server /data
 
   hydra-postgres:
-    build: dockerfiles/hydra/Dockerfile.hydra.postgres
+    build:
+      context: .
+      dockerfile: dockerfiles/hydra/Dockerfile.hydra.postgres
     container_name: hydra-postgres
     restart: always
     environment:
@@ -65,7 +67,9 @@ services:
       retries: 5
 
   hydra-consumer:
-    build: dockerfiles/hydra/Dockerfile.hydra.with.source
+    build:
+      context: .
+      dockerfile: dockerfiles/hydra/Dockerfile.hydra.with.source
     env_file:
       - ./config/.env.hydra
     depends_on:
@@ -75,7 +79,9 @@ services:
     entrypoint: udata-hydra run-kafka-integration
 
   hydra-crawler:
-    build: dockerfiles/hydra/Dockerfile.hydra.with.source
+    build:
+      context: .
+      dockerfile: dockerfiles/hydra/Dockerfile.hydra.with.source
     env_file:
       - ./config/.env.hydra
     depends_on:
@@ -90,14 +96,18 @@ services:
     command: ["redis-server", "--bind", "0.0.0.0", "--port", "6380"]
 
   analysis-consumer:
-    build: dockerfiles/analysis/Dockerfile.analysis.with.source
+    build:
+      context: .
+      dockerfile: dockerfiles/analysis/Dockerfile.analysis.with.source
     env_file:
       - ./config/.env.analysis
     container_name: analysis-consumer
     entrypoint: udata-analysis-service consume
 
   analysis-worker:
-    build: dockerfiles/analysis/Dockerfile.analysis.with.source
+    build:
+      context: .
+      dockerfile: dockerfiles/analysis/Dockerfile.analysis.with.source
     env_file:
       - ./config/.env.analysis
     container_name: analysis-worker
@@ -109,7 +119,9 @@ services:
     command: ["redis-server", "--bind", "0.0.0.0", "--port", "6380"]
 
   csvapi-server:
-    build: dockerfiles/csvapi/Dockerfile.csvapi.with.source
+    build:
+      context: .
+      dockerfile: dockerfiles/csvapi/Dockerfile.csvapi.with.source
     env_file:
       - ./config/.env.csvapi
     ports:
@@ -120,7 +132,9 @@ services:
     entrypoint: csvapi serve -h 0.0.0.0 -p 8000
 
   csvapi-consumer:
-    build: dockerfiles/csvapi/Dockerfile.csvapi.with.source
+    build:
+      context: .
+      dockerfile: dockerfiles/csvapi/Dockerfile.csvapi.with.source
     env_file:
       - ./config/.env.csvapi
     container_name: csvapi-consumer

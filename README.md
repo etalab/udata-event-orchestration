@@ -51,7 +51,8 @@ After installing udata event orchestration package, you can run end-to-end tests
 
 Make sure you have your docker-compose with all services running and run:
 ```
-pytest
+pip install pytest
+pytest tests/
 ```
 
 We assume a default `SLEEP_BETWEEN_BATCHES` of 60 seconds for `udata-hydra` crawler.

@@ -1,0 +1,10 @@
+[submodule "csvapi"]
+	path = csvapi
+	url = git@github.com:etalab/csvapi.git
+	branch = kafka-integration
+[submodule "udata-hydra"]
+	path = udata-hydra
+	url = git@github.com:etalab/udata-hydra.git
+[submodule "udata-analysis-service"]
+	path = udata-analysis-service
+	url = git@github.com:etalab/udata-analysis-service.git
