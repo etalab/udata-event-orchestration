@@ -17,7 +17,11 @@ services:
       - --set redpanda.auto_create_topics_enabled=true
       - --kafka-addr PLAINTEXT://0.0.0.0:29092,OUTSIDE://0.0.0.0:9092
       - --advertise-kafka-addr PLAINTEXT://broker:29092,OUTSIDE://localhost:9092
+      - --pandaproxy-addr 0.0.0.0:8082
+      - --advertise-pandaproxy-addr localhost:8082
     ports:
+      - 8081:8081
+      - 8082:8082
       - 9092:9092
       - 29092:29092
 
