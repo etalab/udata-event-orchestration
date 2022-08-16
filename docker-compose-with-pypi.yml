@@ -11,6 +11,8 @@ services:
     depends_on:
       hydra-postgres:
         condition: service_healthy
+      broker:
+        condition: service_healthy
     container_name: hydra-consumer
     entrypoint: udata-hydra run-kafka-integration
 
@@ -34,6 +36,9 @@ services:
       - ./config/.env.analysis
     container_name: analysis-consumer
     entrypoint: udata-analysis-service consume
+    depends_on:
+      broker:
+        condition: service_healthy
 
   analysis-worker:
     build:
@@ -69,3 +74,6 @@ services:
     volumes:
       - ./csvapi/dbs:/app/dbs
     entrypoint: csvapi consume
+    depends_on:
+      broker:
+        condition: service_healthy
