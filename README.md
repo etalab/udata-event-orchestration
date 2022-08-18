@@ -6,25 +6,27 @@ cp config/.env.hydra.example config/.env.hydra # Make changes if you want
 cp config/.env.csvapi.example config/.env.csvapi # Make changes if you want
 ./get_source.sh # To execute services with source instead of pypi. NB : csvapi with kafka integration has no pypi package yet, you have to download source anyway.
 docker-compose -f docker-compose-shared.yml -f docker-compose-with-source.yml up --build -d  # if you want to execute with source
+docker-compose -f docker-compose-shared.yml -f docker-compose-with-source.yml -f docker-compose-console.yml up --build -d  # if you want to execute with source and launch redpanda's console
 docker-compose -f docker-compose-shared.yml -f docker-compose-with-pypi.yml up --build -d # if you want to execute with pypi packages
 ```
 
 # Services
 
-- kafka with zookeeper
+- redpanda (kafka replacement)
 - minio
-- hydra service :
+- hydra service
   - redis
   - postgres
   - consumer kafka
   - crawler
-- analysis service :
+- analysis service
   - redis
   - consumer kafka
   - worker
 - csvapi service
   - server # localhost:8000
   - consumer
+- [redpanda console](https://github.com/redpanda-data/console) # localhost:8080
 
 # Tooling
 
