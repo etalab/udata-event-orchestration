@@ -5,6 +5,8 @@
 [submodule "udata-hydra"]
 	path = udata-hydra
 	url = git@github.com:etalab/udata-hydra.git
+	branch = main
 [submodule "udata-analysis-service"]
 	path = udata-analysis-service
 	url = git@github.com:etalab/udata-analysis-service.git
+	branch = main
