@@ -24,6 +24,10 @@ services:
       - 8082:8082
       - 9092:9092
       - 29092:29092
+    healthcheck:
+      test: curl -f localhost:9644/v1/status/ready
+      interval: 1s
+      start_period: 30s
 
   minio:
     hostname: minio
