@@ -23,8 +23,7 @@ def cli():
 @cli.command()
 def consume():
     logging.basicConfig(level=logging.INFO)
-    print('coucou')
-    consumer = KafkaConsumer(bootstrap_servers=f"{KAFKA_HOST}:{KAFKA_PORT}", group_id='toto')
+    consumer = KafkaConsumer(bootstrap_servers=f"{KAFKA_HOST}:{KAFKA_PORT}", group_id='uket_debug_consumer')
     consumer.subscribe([PREFIX_TOPIC+'.'+x['topic'] for x in messages])
     for message in consumer:
         try:
