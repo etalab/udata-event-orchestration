@@ -7,10 +7,13 @@ license = "MIT"
 
 [tool.poetry.dependencies]
 python = "^3.9"
-click = "~8.0.4"
-kafka-python = "~2.0.2"
-requests = "~2.27.1"
-boto3 = "~1.21.21"
+click = "^8.0.4"
+kafka-python = "^2.0.2"
+requests = "^2.27.1"
+boto3 = "^1.21.21"
+csvapi = { path = "./csvapi", develop = true }
+udata_hydra = { path = "./udata-hydra", develop = true }
+udata_analysis_service = { path = "./udata-analysis-service", develop = true }
 
 [tool.poetry.dev-dependencies]
 
