@@ -2,8 +2,9 @@ FROM python:3.9
 
 WORKDIR /app
 
+RUN pip install --upgrade pip
+RUN pip install poetry
+
 COPY ./csvapi/ .
 
-RUN pip install -e .
-RUN pip install Jinja2==3.0.3
-RUN pip install Werkzeug==1.0.0
+RUN poetry install

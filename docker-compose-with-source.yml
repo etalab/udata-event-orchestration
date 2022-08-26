@@ -12,7 +12,7 @@ services:
       hydra-postgres:
         condition: service_healthy
     container_name: hydra-consumer
-    entrypoint: udata-hydra run-kafka-integration
+    entrypoint: poetry run udata-hydra run-kafka-integration
 
   hydra-crawler:
     build:
@@ -24,7 +24,7 @@ services:
       hydra-postgres:
         condition: service_healthy
     container_name: hydra-crawler
-    entrypoint: udata-hydra-crawl
+    entrypoint: poetry run udata-hydra-crawl
 
   analysis-consumer:
     build:
@@ -33,7 +33,7 @@ services:
     env_file:
       - ./config/.env.analysis
     container_name: analysis-consumer
-    entrypoint: udata-analysis-service consume
+    entrypoint: poetry run udata-analysis-service consume
 
   analysis-worker:
     build:
@@ -42,7 +42,7 @@ services:
     env_file:
       - ./config/.env.analysis
     container_name: analysis-worker
-    entrypoint: udata-analysis-service work
+    entrypoint: poetry run udata-analysis-service work
 
   csvapi-server:
     build:
@@ -55,7 +55,7 @@ services:
     container_name: csvapi-server
     volumes:
       - ./csvapi/dbs:/app/dbs
-    entrypoint: csvapi serve -h 0.0.0.0 -p 8000
+    entrypoint: poetry run csvapi serve -h 0.0.0.0 -p 8000
 
   csvapi-consumer:
     build:
@@ -66,4 +66,4 @@ services:
     container_name: csvapi-consumer
     volumes:
       - ./csvapi/dbs:/app/dbs
-    entrypoint: csvapi consume
+    entrypoint: poetry run csvapi consume

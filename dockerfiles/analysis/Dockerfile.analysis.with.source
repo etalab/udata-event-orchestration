@@ -2,11 +2,11 @@ FROM python:3.9
 
 WORKDIR /app
 
-RUN pip install flit
+RUN pip install --upgrade pip
+RUN pip install poetry
 
 COPY ./udata-analysis-service/ .
 
-RUN FLIT_ROOT_INSTALL=1 make install
+RUN poetry install
 
 #ENTRYPOINT ["udata-analysis-service", "consume"]
-
